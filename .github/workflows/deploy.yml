@@ -1,0 +1,16 @@
+name: Automated Deployment for ODRS
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Code From Github
+        uses: actions/checkout@v4
+
+      - name: Copy Files tp Web Directory
+        run: |
+          xcopy /E /Y /I . "C:\Apache24\htdocs\BSP-ODRS"
