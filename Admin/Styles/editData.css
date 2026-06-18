@@ -1,0 +1,896 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: url(../../Images/BSP_Logo.png);
+    background-size: 17%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.background-blur {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.background-blur #header .container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px -2px 7px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+#bsp-logo {
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    background: url('../../Images/BSP_Logo.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+}
+#logout-btn {
+    display: inline-block;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: url('../../Images/logout_Icon.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+    right:80px;
+    cursor: pointer;
+    border: none;
+}
+
+#logout-btn:hover {
+    background: url('../../Images/logout-hover_Icon.png') no-repeat center center;
+    background-size: contain;
+}
+
+h1 {
+    font-size: 28px;
+    color: #000000;
+    margin: 0;
+    font-weight: lighter;
+    white-space: nowrap;
+}
+
+.background-blur .sidebar-menu {
+    position: fixed;
+    align-items: center center;
+    top: 100px;
+    left: 23px;
+    height: calc(100vh - 120px);
+    width: 301px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px -2px 7px -4px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.blockBtn {
+    border-radius: 8px;
+}
+.blockBtn .btn {
+    display: block;
+    padding-left: 5%;
+    top:8px;
+    left: 8px;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    text-align: left;
+    background-color: #ffffff;
+    border: none;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+}
+.blockBtn #home-key {
+    padding-top: 5%;
+}
+.blockBtn .btn:hover {
+    background-color: hsla(131, 90%, 16%, 0.15);
+}
+
+#editFormBtn {
+    background-color: hsla(131, 90%, 16%, 0.15);
+}
+
+.admin-container {
+    position: fixed;
+    top: 100px;
+    left: 339px;
+    height: calc(100vh - 120px);
+    width: calc(100vw - 360px);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.admin-search-history {
+    display: flex; 
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.history-search-header {
+    display: flex;
+    align-items: center;
+    background-color: #044f12;
+    height: 60px;
+}
+
+.admin-index-text {
+    width: 50%;
+    font-size: 28px;
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.searchContainer{
+    width: 215px;
+    height: 28px;
+}
+
+.yearContainer{
+    width: 110px;
+    height: 28px;
+    margin-right: 0px;
+    margin-bottom: 25px;
+}
+
+.searchForm{
+    display: flex;
+}
+
+.searchForm input{
+    width: 88%;
+    height: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid;
+    border-radius: 20px;
+    border-width: 0.75px;
+    border-color: rgb(146, 142, 142, 0.91);
+    font-size: 14px;
+}
+
+.searchForm input::placeholder{
+    text-align: center;
+}
+
+.searchButton{
+    width: 18px;
+    height: 18px;
+    top: 10.7%;
+    right: 8.30%;
+    margin-top: 3%;
+    margin-left: -13%;
+    background: url('../../Images/search_Icon.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+}
+
+.yearDropDown{
+    width: 88%;
+    height: 31.5px;
+    margin-top: 10.750px;
+    margin-left: 6.55px;
+    border-radius: 4px;
+    border-width: 0.75px;
+    border-color: rgb(146, 142, 142, 0.91);
+    font-size: 14px;
+}
+
+.tableHorizontalLine{
+    width: 1320px;
+    margin-top: 4px;
+    border: solid;
+    border-width: 2px;
+    border-color: rgba(217, 217, 217, 0.91);
+}
+
+.requestSummary {
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+}
+
+.notificationContainer{
+    display: none;
+    z-index: 15;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(147, 147, 147, 0.50);
+}
+
+.notificationContainer .logOutNotification{
+    display: none;
+    min-width: 343px;
+    width: 23%;
+    min-height: 150px;
+    height: 17%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logOutNotification h2,
+.logOutNotification h4{
+    margin-left: 5%;
+    font-weight: lighter;
+}
+
+.logOutNotification h2{
+    margin-bottom: 10px;
+}
+
+.logOutNotification h4{
+    margin-bottom: 15px;
+}
+
+.buttonContainer {
+    display: flex;
+}
+
+.logOutNotification button{
+    width: 21.94%;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff00;
+    color: #FF0000;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logOutNotification .button-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.tableContainer .noRecordsFound{
+    background: none;
+    color: #989898;
+}
+
+
+/* start of weeklyreport.css */
+
+.container-top {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#topLeft{
+    margin-right: 5px;
+    width: 45%;
+}
+
+#topRight {
+    margin-left: 5px;
+    width: 45%;
+}
+
+.weeklyReportMainContainer{
+    position: fixed;
+    top: 100px;
+    left: 339px;
+    height: calc(100vh - 113px);
+    width: calc(100vw - 360px);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.weeklyReportMainContainer .container-top .reportSummaryContainer,
+.weeklyReportMainContainer .container-top .account-management,
+.weeklyReportSubcontainer .detailedReportContainer{
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px -2px 7px -4px rgba(0, 0, 0, 0.5);
+    flex: 1;
+}
+
+.weeklyReportMainContainer .reportSummaryContainer,
+.weeklyReportMainContainer .account-management {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.division-summary,
+.accounts-summary {
+    flex: 2;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.add-division-container {
+    display: flex;
+    flex:1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-division-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    border: #044f12 2px solid;
+    border-radius: 4px;
+    width: 85%;
+    align-items: center;
+}
+
+.add-division-label {
+    font-size: 16px;
+}
+
+.division-input-container {
+    width: 98%;
+    border-radius: 4px;
+    border: #989898 1px solid;
+    height: 40px;
+    margin-bottom: 2px;
+}
+
+.division-input-container label {
+    font-size: 13px;
+    padding-left: 5px;
+    font-weight: bold;
+    color: #4f4e4e;
+}
+
+#divisionName, 
+#divisionChief{
+    font-size: 15px;
+    border: none;
+    margin-left: 5px;
+}
+
+#divisionName:focus, 
+#divisionChief:focus {
+    outline: none;
+}
+
+#addDivisionBtn {
+    width: 100px;
+    height: 30px;
+    padding: 2px 0;
+    text-align: center;
+    border: 2px solid #044f12;
+    background: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #044f12;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 4px;
+}
+
+#addDivisionBtn:hover {
+    background-color: #044f12;
+    color: white;
+}
+
+.division-info-table, 
+.bsp-account-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout:fixed;
+}
+
+.division-info-table thead,
+.bsp-account-table thead{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    
+}
+
+.division-info-table td input ,
+.driver-info-table td input,
+.vehicle-info-table td input, 
+.bsp-account-table td input {
+    color: black !important; 
+}
+
+.division-info-table td, 
+.division-info-table th{
+    padding-top: 5px;
+    padding-left: 20px;
+    width: 30%;
+    text-align: left;
+    font-size: 20px;
+}
+
+.division-info-table .div-name{
+    width: 25%;
+}
+
+.division-info-table .div-chief{
+    width: 35%;
+}
+
+.division-info-table .editCol,
+.division-info-table .saveCol,
+.division-info-table .deleteCol{
+    width: 5%;
+}
+
+#accountNameCol {
+    width: 149px;
+}
+
+#emailCol {
+    width: 135px;
+}
+
+#accountRoleCol {
+    width: 55px;
+}
+
+.vehicle-info-table .editRow, 
+.vehicle-info-table .editCol {
+    width: 6.67%;
+}
+
+.edit-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url('../../Images/edit.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.deleteRow,
+.deleteCol {
+    width: 6.67%;
+    align-items: center;
+}
+
+.delete-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url('../../Images/delete.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.saveRow,
+.saveCol {
+    width: 6.67%;
+}
+
+.save-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url('../../Images/diskette.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.resetRow,
+.resetCol {
+    width: 10px;
+}
+
+.reset-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url('../../Images/reset.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.vehicle-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.vehicle-info-table td,
+.vehicle-info-table th {
+    padding-top: 5px;
+    padding-left: 20px;
+    /* width: 180px; */
+    text-align: left;
+    white-space: nowrap;
+    font-size: 20px;
+}
+
+#vehicleColHeader { 
+    width: 130px;
+}
+
+#plateNumColHeader { 
+    width: 85px;
+}
+
+.driver-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.driver-info-table td,
+.driver-info-table th {
+    padding-top: 5px;
+    padding-left: 20px;
+    /* width: 200px; */
+    text-align: left;
+    font-size: 20px;
+}
+.driver-info-table .editRow, 
+.driver-info-table .editCol,
+.driver-info-table .deleteCol{
+    width: 6.67%;
+}
+
+.vehicle-drive-btn, .division-btn {
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: 10px;
+    padding-left: 5px;
+    height: 25px;
+    vertical-align: middle;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: .2s;
+}
+.vehicle-drive-btn:hover, 
+.division-btn:hover {
+    box-shadow: 0 0 4px black;
+    background-color: white;
+    color: #044f12;
+}
+
+.reportSummaryContainer .currentDateContainer,
+.account-management .account-management-header{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #044f12;
+    color: white;
+    display: flex;
+}
+
+.default-pass-container {
+    font-size: 14px;
+    flex-grow: 1;
+    text-align: right;
+    padding-right: 20px;
+
+}
+
+.currentDateContainer .currentDateSubcontainer,
+.account-management-header .account-management-text {
+    width: 330px;
+    padding-top: 4px;
+    vertical-align: bottom;
+}
+
+.currentDateContainer .currentDateSubcontainer h3,
+.account-management-header .account-management-text h3{
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    padding-left: 4%;
+    padding-bottom: 8px;
+}
+
+.reportSummaryContainer .summarySubcontainer {
+    width: 100%;
+    height: 350px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.account-management .summarySubcontainer{
+    width: 100%;
+    height: 350px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.summarySubcontainer .summaryInfo{
+    flex: 1;
+    margin-right: 5px;
+}
+
+.summaryInfo .totalReservationContainer{
+    color: #044f12;
+}
+
+.summaryInfo .reservationCount{
+    margin-left: 6.75%;
+}
+
+.summaryInfo .facilityReservationCount{
+    margin-left: 7.15%;
+}
+
+.summaryInfo .reservationCount h4,
+.summaryInfo .facilityReservationCount h4{
+    font-weight: lighter;
+}
+
+.summaryInfo .pdfContainer{
+    margin-left: 7.15%;
+}
+
+.summaryInfo .pdfContainer button{
+    width: 175px;
+    height: 50px;
+    border: 2px solid #044f12;
+    border-radius: 4px;
+    background: none;
+    color: #044f12;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.summaryInfo .pdfContainer button:hover{
+    background-color: #044f12;
+    color: white;
+}
+
+.weeklyReportMainContainer .weeklyReportSubcontainer{
+    display: flex;
+    width: 100%;
+    height: 48%;
+    justify-content: space-between;
+}
+
+.weeklyReportSubcontainer .detailedReportContainer{
+    flex: 1;
+    width: 45%;
+    height: 100%;
+}
+
+.weeklyReportSubcontainer #leftReportContainer{
+    margin-right: 5px;
+}
+
+.weeklyReportSubcontainer #rightReportContainer{
+    margin-left: 5px;
+}
+
+.detailedReportContainer .detailedSubcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.detailedSubcontainer h3,
+.reportSummaryContainer .titleContainer h3{
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 8px;
+}
+
+.detailedSubcontainer .titleContainer{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #044f12;
+    color: white;
+    display: flex;
+}
+
+.detailedSubcontainer .tableContainer{
+    width: 100%;
+    height: 350px;
+    margin-top: 10px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.detailedSubcontainer .tableReservations{
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.tableReservations thead{
+    top: 0;
+    background-color: white;
+}
+
+.tableReservations th{
+    width: 20%;
+    height: 24px;
+    font-size: 14px;
+}
+
+.tableReservations tbody tr:hover{
+    background-color: #044e1226;
+} 
+
+.tableReservations td{
+    height: 24px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.status-modal {
+    display: none;
+    position: fixed;
+    z-index: 15;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    background: white;
+    padding: 10px 20px 0px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.status-modal-icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    flex-shrink: 0;
+    margin: auto;
+}
+
+.status-dialogue {
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.modal-content {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+    align-items: flex-end;
+}
+
+.update-confirm-btn, 
+.confirm-update-btn,
+.cancel-update-btn {
+    
+    display: block;
+    top:8px;
+    left: 8px;
+    width: 100px;
+    height: 50px;
+    padding: 5px 0;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #044f12;
+    background: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #044f12;
+    cursor: pointer;
+    border-radius: 4px;
+    gap: 10px;
+}
+#cancelBtn {
+    border: 2px solid #A50003;
+    color: #A50003;
+}
+
+#cancelBtn:hover{
+    background-color: #A50003;
+    color: #FFFFFF;
+}
+
+.update-confirm-btn:hover, 
+.confirm-update-btn:hover{
+    background-color: #044f12;
+    color: #FFFFFF;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #514f4f;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.reportSummaryContainer .titleContainer{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #044f12;
+    color: white;
+    display: flex;
+}

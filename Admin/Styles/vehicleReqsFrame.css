@@ -1,0 +1,332 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: url(../../Images/BSP_Logo.png);
+    background-size: 17%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.background-blur {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.background-blur #header .container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px -2px 7px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;  
+    cursor: pointer;
+}
+
+
+#bsp-logo {
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    background: url('../../Images/BSP_Logo.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+}
+#logout-btn {
+    display: inline-block;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: url('../../Images/logout_Icon.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+    right:80px;
+    cursor: pointer;
+    border: none;
+}
+
+#logout-btn:hover {
+    background: url('../../Images/logout-hover_Icon.png') no-repeat center center;
+    background-size: contain;
+}
+
+#pending-reqs-btn {
+    background-color: #D9D9D9;
+}
+
+h1 {
+    font-size: 28px;
+    color: #000000;
+    margin: 0;
+    font-weight: lighter;
+    white-space: nowrap;
+}
+
+.background-blur .sidebar-menu {
+    position: fixed;
+    align-items: center center;
+    top: 100px;
+    left: 23px;
+    height: calc(100vh - 120px);
+    width: 301px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px -2px 7px -4px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.blockBtn {
+    border-radius: 4px;
+}
+.blockBtn .btn {
+    display: block;
+    padding-left: 5%;
+    top:8px;
+    left: 8px;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    text-align: left;
+    background-color: #ffffff;
+    border: none;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.blockBtn #vrf-btn {
+    background-color: hsla(131, 90%, 16%, 0.15);
+}
+.blockBtn #home-key {
+    padding-top: 5%;
+}
+.blockBtn .btn:hover {
+    background-color: hsla(131, 90%, 16%, 0.15);
+}
+.admin-container {
+    position: fixed;
+    top: 100px;
+    left: 339px;
+    height: calc(100vh - 120px);
+    width: calc(100vw - 360px);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px -2px 7px -4px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.admin-index-text {
+    color: #ffffff;
+    width: 50%;
+    font-size: 28px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.admin-pending-header {
+    display: flex;
+    align-items: center;
+    background-color: #044f12;
+    height: 60px;
+}
+
+.searchContainer{
+    width: 215px;
+    height: 28px;
+}
+
+.admin-search-pending-request {
+    display: flex; 
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+     
+}
+
+.yearContainer{
+    width: 110px;
+    height: 28px;
+    margin-right: 0px;
+    margin-bottom: 25px;
+}
+
+.searchForm{
+    display: flex;
+}
+
+.searchForm input{
+    width: 88%;
+    height: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid;
+    border-radius: 20px;
+    border-width: 0.75px;
+    border-color: rgb(146, 142, 142, 0.91);
+    font-size: 14px;
+}
+
+.searchForm input::placeholder{
+    text-align: center;
+}
+
+.searchButton{
+    width: 18px;
+    height: 18px;
+    top: 10.7%;
+    right: 8.30%;
+    margin-top: 3%;
+    margin-left: -13%;
+    background: url('../../Images/search_Icon.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+}
+
+.yearDropDown{
+    width: 88%;
+    height: 31.5px;
+    margin-top: 12.750px;
+    margin-left: 6.55px;
+    border-radius: 4px;
+    border-width: 0.75px;
+    border-color: rgb(146, 142, 142, 0.91);
+    font-size: 14px;
+}
+
+.tableHorizontalLine{
+    width: 1320px;
+    margin-top: 4px;
+    border: solid;
+    border-width: 2px;
+    border-color: rgba(217, 217, 217, 0.91);
+}
+
+.tableContainer {
+    width: 95%;
+    height: 40px;
+    margin: auto;
+}
+
+table {
+    width: 1000px;
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+.tableContainer th {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.tableContainer td {
+    text-align: center;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    font-size: 20px;
+}
+
+.tableContainer tbody tr {
+    height: 30px;
+}
+
+.tableContainer tbody tr:hover {
+    background-color: hsla(131, 90%, 16%, 0.15);
+    cursor: pointer;
+}
+
+tr.no-record-row {
+    pointer-events: none;  
+    background-color: inherit !important;
+}
+tr.no-record-row:hover {
+    background-color: inherit !important;
+}
+
+.pendingRequestSummary {
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+}
+
+.notificationContainer{
+    display: none;
+    z-index: 15;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(147, 147, 147, 0.50);
+}
+
+.notificationContainer .logOutNotification{
+    display: none;
+    min-width: 343px;
+    width: 23%;
+    min-height: 150px;
+    height: 17%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+}
+
+.logOutNotification h2,
+.logOutNotification h4{
+    margin-left: 5%;
+    font-weight: lighter;
+}
+
+.logOutNotification h2{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.logOutNotification h4{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.logOutNotification button{
+    width: 21.94%;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff00;
+    color: #FF0000;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logOutNotification .button-container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}

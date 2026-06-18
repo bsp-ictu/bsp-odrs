@@ -1,0 +1,177 @@
+.uploadPhotoMainContainer{
+    display: none;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(147, 147, 147, 0.50);
+}
+
+.uploadPhotoMainContainer .photoFormContainer{
+    width: 30%;
+    height: 35%;
+    min-height: fit-content;
+    margin: auto;
+    margin-top: 32.5vh;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+    background-color: white;
+}
+
+.photoFormContainer h2{
+    margin: 0;
+    padding: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 100%;
+    background-color: #044f12;
+    color: white;
+    text-align: center;
+}
+
+.photoFormContainer .inputFileContainer{
+    width: 90%;
+    height: 130px;
+    margin: auto;
+    margin-top: 15px;
+    padding-top: 5px;
+    border: 2px solid #044f12;
+    border-radius: 4px;
+}
+
+.inputFileContainer .mainPlaceholderTitle{
+    margin-left: 10px;
+    color: #4f4e4e;
+    font-size: 16px;
+    font-weight: bold; 
+}
+
+.inputFileContainer .subPlaceholderTitle{
+    display: flex;
+    width: 95%;
+    margin-left: 10px;
+    margin-top: 7px;
+    align-items: center;
+}
+
+.subPlaceholderTitle h4{
+    width: 75px;
+    margin: 0;
+    padding: 0;
+    color: #4f4e4e;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.subPlaceholderTitle input{
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.subPlaceholderTitle input:focus{
+    outline: none;
+    border-bottom: 2px solid #044f12;
+}
+
+.inputFileContainer .dummyButtonContainer{
+    width: 100px;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.dummyButtonContainer .dummyFileInput{
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 2px solid #044f12;
+    border-radius: 4px;
+    color: #044f12;
+    font-weight: bold;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.inputFileContainer .dummyFileInput:hover{
+    background-color: #044f12;
+    color: white;
+}
+
+.inputFileContainer .fileInput{
+    display: none;
+}
+
+.photoFormContainer .photoButtonContainer{
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.photoButtonContainer button{
+    width: 110px;
+    height: 35px;
+    margin-left: 7px;
+    margin-right: 7px;
+    border: 2px solid;
+    border-radius: 4px;
+    background: none;
+    font-weight: bold;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.photoButtonContainer .cancelUploadButton{
+    border-color: #a50003;
+    color: #a50003;
+}
+
+.photoButtonContainer .cancelUploadButton:hover{
+    background-color: #a50003;
+    color: white;
+}
+
+.photoButtonContainer .proceedUploadButton{
+    border-color: #044f12;
+    color: #044f12;
+}
+
+.photoButtonContainer .proceedUploadButton:hover{
+    background-color: #044f12;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .uploadPhotoMainContainer .photoFormContainer{
+        width: 95%;
+    }
+
+    .photoFormContainer .inputFileContainer{
+        min-height: fit-content;
+    }
+
+    .inputFileContainer .mainPlaceholderTitle{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 415px) {
+    .uploadPhotoMainContainer .photoFormContainer{
+        height: 28%;
+    }
+}
+
+@media (max-width: 395px) {
+    .uploadPhotoMainContainer .photoFormContainer{
+        height: 31%;
+    }
+}
+
+@media (max-width: 380px) {
+    .uploadPhotoMainContainer .photoFormContainer{
+        height: 35%;
+    }
+}

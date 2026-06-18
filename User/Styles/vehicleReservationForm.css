@@ -1,0 +1,372 @@
+.popupVehicleReservation {
+  display: none;
+  width: 35%;
+  min-width: 375px;
+  height: 85%;
+  min-height: fit-content;
+  max-height: 695px;
+  border-radius: 2px;
+  box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+  background-color: #ffffff;
+}
+
+.popupVehicleReservation form {
+  width: 100%;
+  height: 100%;
+  min-height: fit-content;
+}
+
+.popupVehicleReservation .formTitleContainer {
+  display: flex;
+  width: 100%;
+  height: 9%;
+  min-height: fit-content;
+  background-color: #044f12;
+  align-items: center;
+  justify-content: center;
+}
+
+.popupVehicleReservation h2 {
+  margin: 0;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.popupVehicleReservation .formDetails {
+  position: relative;
+  width: 95%;
+  height: 90%;
+  margin: auto;
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #044f12 #ffffff;
+}
+
+.popupVehicleReservation .dateAndTime {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  height: 25px;
+  margin: auto;
+  align-items: center;
+}
+
+.popupVehicleReservation .dateAndTime span {
+  width: 143.75px;
+  text-align: right;
+}
+
+.popupVehicleReservation .dateAndTime div {
+  width: 24px;
+  margin-left: 1%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  color: #d9d9d900;
+}
+
+.dateAndTime .dateIcon {
+  background-image: url("../../Images/calendar_Icon.png");
+}
+
+.dateAndTime .timeIcon {
+  background-image: url("../../Images/clock_Icon.png");
+}
+
+.popupVehicleReservation .flexDivisionDateContainer {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.popupVehicleReservation .divisionContainer,
+.popupVehicleReservation .dateContainer {
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #928e8e;
+  border-radius: 4px;
+}
+
+.divisionContainer label,
+.dateContainer label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4f4e4e;
+}
+
+.divisionContainer select,
+.dateContainer input {
+  width: 150px;
+  border: none;
+  background: #ffffff00;
+  font-size: 16px;
+}
+
+.divisionContainer select:focus,
+.dateContainer input:focus {
+  outline: none;
+}
+
+.popupVehicleReservation .etdMainContainer {
+  display: flex;
+  margin: auto;
+  font-size: 18px;
+  justify-content: space-between;
+}
+
+.etdMainContainer .etdSubContainer {
+  width: 48%;
+}
+
+.etdSubContainer .inputETD {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #928e8e;
+  border-radius: 4px;
+}
+
+.etdSubContainer .inputETD label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4f4e4e;
+}
+
+.etdSubContainer .inputETD input {
+  border: none;
+  background: #00000000;
+  font-size: 16px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.etdSubContainer .inputETD input:focus {
+  outline: none;
+}
+
+.popupVehicleReservation .destinationContainer {
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  min-height: fit-content;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #928e8e;
+  border-radius: 4px;
+}
+
+.popupVehicleReservation .destinationContainer label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4f4e4e;
+}
+
+.destinationContainer #destinationNameContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: 5px;
+}
+
+#destinationNameContainer input {
+  width: 120px;
+  margin-right: 2px;
+  border: none;
+  background: #00000000;
+  font-size: 16px;
+}
+
+#destinationNameContainer input:focus {
+  outline: none;
+}
+
+#destinationNameContainer .destinationButton,
+#passengerNameContainer .addPassengerButton {
+  width: 23px;
+  height: 24px;
+  border: 1px solid #044f12;
+  background: none;
+  color: #044f12;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#destinationNameContainer .destinationButton:hover,
+#passengerNameContainer .addPassengerButton:hover {
+  background-color: #044f12;
+  color: #ffffff;
+}
+
+#destinationNameContainer .removeDestinationButton,
+#passengerNameContainer .removePassengerButton {
+  width: 23px;
+  height: 24px;
+  margin-right: 4px;
+  border: 1px solid #a50003;
+  background: none;
+  color: #a50003;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#destinationNameContainer .removeDestinationButton:hover,
+#passengerNameContainer .removePassengerButton:hover {
+  background-color: #a50003;
+  color: #ffffff;
+}
+
+.popupVehicleReservation .purposeContainer {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #928e8e;
+  border-radius: 4px;
+}
+
+.popupVehicleReservation .purposeContainer label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4f4e4e;
+}
+
+.popupVehicleReservation .purposeContainer input {
+  width: 99%;
+  border: none;
+  background: #00000000;
+  font-size: 16px;
+}
+
+.popupVehicleReservation .purposeContainer input:focus {
+  outline: none;
+}
+
+.popupVehicleReservation .passengerNumberContainer {
+  width: 45.78%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #928e8e;
+  border-radius: 4px;
+}
+
+.popupVehicleReservation .passengerNumberContainer label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4f4e4e;
+}
+
+.popupVehicleReservation .passengerContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #928e8e;
+  border-radius: 4px;
+}
+
+.popupVehicleReservation .passengerContainer label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4f4e4e;
+}
+
+.passengerContainer #passengerNameContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: 5px;
+}
+
+#passengerNameContainer input {
+  width: 110px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+  border: none;
+  background: #00000000;
+  font-size: 16px;
+}
+
+#passengerNameContainer input:focus {
+  outline: none;
+}
+
+.popupVehicleReservation .requesterContainer,
+.popupVehicleReservation .divisionChiefContainer {
+  width: 45.7%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #928e8e;
+  border-radius: 4px;
+}
+
+.popupVehicleReservation .requesterContainer label,
+.popupVehicleReservation .divisionChiefContainer label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4f4e4e;
+}
+
+.popupVehicleReservation .passengerNumberContainer input,
+.popupVehicleReservation .requesterContainer input,
+.popupVehicleReservation .divisionChiefContainer input {
+  width: 98%;
+  border: none;
+  background: #00000000;
+  font-size: 16px;
+}
+
+.popupVehicleReservation .passengerNumberContainer input:focus,
+.popupVehicleReservation .requesterContainer input:focus,
+.popupVehicleReservation .divisionChiefContainer input:focus {
+  outline: none;
+}
+
+.popupVehicleReservation .buttonFormContainer {
+  margin: auto;
+  margin-top: 2%;
+  text-align: center;
+}
+
+.buttonFormContainer button {
+  width: 21.94%;
+  min-width: fit-content;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.buttonFormContainer .cancelForm {
+  margin-right: 10px;
+  border: 2px solid #a50003;
+  color: #a50003;
+}
+
+.buttonFormContainer .cancelForm:hover {
+  background-color: #a50003;
+  color: #ffffff;
+}
+
+.buttonFormContainer .submitForm {
+  margin-left: 10px;
+  border: 2px solid #044f12;
+  color: #044f12;
+}
+
+.buttonFormContainer .submitForm:hover {
+  background-color: #044f12;
+  color: #ffffff;
+}
+
+@media (max-width: 450px) {
+  .popupVehicleReservation {
+    margin-bottom: 14%;
+  }
+}

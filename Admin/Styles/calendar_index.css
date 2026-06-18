@@ -1,0 +1,234 @@
+.calendarSubcontainer {
+    flex: 1;
+    width: 90%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    min-width: fit-content;
+}
+
+.calendarContainer .calendarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendarContainer button {
+    background-color: #044f12;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendarContainer .calendarDays {
+    display: grid;
+    height: 265px;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.day {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #E5E7EB;
+}
+
+.day:hover {
+    background-color: #044f12;
+    color: white;
+    cursor: pointer;
+}
+
+.today {
+    background-color: #044f12;
+    color: white;
+    font-weight: bold;
+}
+
+
+.vrf {
+    background-color: #E9B872;
+    color: black;
+}
+
+.nof {
+    background-color: #90A959;
+    color: black;
+}
+.both {
+    background: linear-gradient(to bottom right, #E9B872 50%, #90A959 50%);
+    color: black;
+}
+
+/* Weekday labels */
+.calendar .calendarWeekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.calendar .calendarWeekdays div {
+    text-align: center;
+    padding: 5px 0;
+    color: #044f12;
+}
+
+.calendarContainer .legendContainer{
+    display: flex;
+    width: 93.5%;;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.legendContainer .legendVehicleReservation,
+.legendContainer .legendNationalOffice{
+    display: flex;
+    margin-top: 10px;    
+}
+
+.legendContainer .legendVehicleReservation{
+    width: 41%;
+}
+
+.legendContainer .legendNationalOffice{
+    width: 35%;
+}
+
+.colorVehicleReservation,
+.colorNationalOffice{
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+}
+
+.colorVehicleReservation{
+    background-color: #E9B872;
+}
+
+.colorNationalOffice{
+    background-color: #90A959;
+}
+
+.legendVehicleReservation label,
+.legendNationalOffice label{
+    margin-left: 10px;
+}
+
+.calendarContainer hr{
+    width: 93.5%;
+    margin-top: 10px;
+    border: 2px solid;
+    border-color: #D9D9D9;
+}
+
+.calendarContainer .upcomingReservationContainer{
+    flex: 1;
+    overflow-y: auto;
+    width: 90%;
+    margin: auto;
+}
+
+.upcomingReservationContainer .noApprovedReservation{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.noApprovedReservation h4{
+    position: relative;
+    margin: 0;
+    padding-top: 16%;
+    color: #989898;
+    font-weight: lighter;
+}
+
+.upcomingReservationContainer .reservationDetails{
+    display: flex;
+    width: 96%;
+    height: 80px;
+    margin: auto;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    box-shadow: 0 0 1px rgb(154, 153, 151);
+}
+
+.reservationDetails .reservationDate{
+    width: 28%;
+    height: 100%;
+    background-color: #044f12;
+    color: white;
+    text-align: center;
+}
+
+.reservationDate .reservedMonth{
+    position: relative;
+    top: 11.5%;
+    font-size: 20px;
+}
+
+.reservationDate .reservedDate{
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+}
+
+.reservationDetails .reservationOtherInfo{
+    width: 72%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+.reservationOtherInfo .reservationType,
+.reservationOtherInfo .destinationFacility{
+    width: 92%;
+    margin: auto;
+}
+
+.reservationOtherInfo .reservationType{
+    margin-top: 10px;
+    color: #044f12;
+    font-size: small;
+}
+
+.reservationOtherInfo .destinationFacility{
+    font-size: 16px;
+}
+
+.reservationOtherInfo .reservedTime{
+    display: flex;
+    width: 90px;
+    margin-left: 4%;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: hsla(131, 90%, 16%, 0.15);
+    justify-content: space-evenly;
+}
+.reservedTimeNOF{
+    display: flex;
+    width: 183px;
+    margin-left: 4%;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: hsla(131, 90%, 16%, 0.15);
+    justify-content: space-evenly;
+}
+
+.reservationOtherInfo .reservedTimeIcon{
+    width: 16px;
+    height: 16px;
+    background-image: url('../../Images/clock_Icon.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

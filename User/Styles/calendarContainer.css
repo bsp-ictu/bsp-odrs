@@ -1,0 +1,304 @@
+.calendarSubcontainer {
+  width: 90%;
+  min-width: fit-content;
+  height: 65%;
+  min-height: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+.calendarContainer .calendarHeader {
+  display: flex;
+  height: 15%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendarContainer button {
+  background: #044f12;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calendarContainer .calendar {
+  height: 79%;
+  min-height: fit-content;
+}
+
+.calendarContainer .calendarDays {
+  display: grid;
+  width: 100%;
+  height: 90%;
+  min-height: fit-content;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  width: 70%;
+  height: 85%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #e5e7eb;
+}
+
+.day:hover {
+  background-color: #044f12;
+  color: white;
+  cursor: pointer;
+}
+
+.today {
+  background-color: #044f12;
+  color: white;
+  font-weight: bold;
+}
+
+.vrf {
+  background-color: #e9b872;
+  color: black;
+}
+
+.nof {
+  background-color: #90a959;
+  color: black;
+}
+
+.both {
+  background: linear-gradient(to bottom right, #e9b872 50%, #90a959 50%);
+  color: black;
+}
+
+/* Weekday labels */
+.calendar .calendarWeekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.calendar .calendarWeekdays div {
+  text-align: center;
+  padding: 5px 0;
+  color: #044f12;
+}
+
+.calendarContainer .legendContainer {
+  display: flex;
+  width: 93.5%;
+  height: 4%;
+  min-height: fit-content;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.legendContainer .legendVehicleReservation,
+.legendContainer .legendNationalOffice {
+  display: flex;
+  min-height: fit-content;
+  align-items: center;
+}
+
+.legendContainer .legendVehicleReservation {
+  width: 50%;
+}
+
+.legendContainer .legendNationalOffice {
+  width: 37%;
+}
+
+.colorVehicleReservation,
+.colorNationalOffice {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+}
+
+.colorVehicleReservation {
+  background-color: #e9b872;
+}
+
+.colorNationalOffice {
+  background-color: #90a959;
+}
+
+.legendVehicleReservation label,
+.legendNationalOffice label {
+  margin-left: 10px;
+  margin-top: 1px;
+  font-size: 14px;
+}
+
+.calendarContainer hr {
+  width: 93.5%;
+  margin: 1.75%;
+  border: 2px solid;
+  border-color: #d9d9d9;
+}
+
+.calendarContainer .upcomingReservationContainer {
+  overflow-y: auto;
+  width: 90%;
+  height: 28.6%;
+  margin: auto;
+  scrollbar-width: thin;
+}
+
+.upcomingReservationContainer .noApprovedReservation {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.noApprovedReservation h4 {
+  position: relative;
+  margin: 0;
+  padding-top: 16%;
+  color: #989898;
+  font-weight: lighter;
+}
+
+.upcomingReservationContainer .reservationDetails {
+  display: flex;
+  width: 96%;
+  height: 80px;
+  min-height: fit-content;
+  margin: auto;
+  margin-top: 2.5px;
+  margin-bottom: 4px;
+  box-shadow: 0 0 1px rgb(154, 153, 151);
+  cursor: pointer;
+}
+
+.reservationDetails .reservationDate {
+  width: 28%;
+  height: 100%;
+  background-color: #044f12;
+  color: white;
+  text-align: center;
+}
+
+.reservationDate .reservedMonth {
+  position: relative;
+  top: 11.5%;
+  font-size: 20px;
+}
+
+.reservationDate .reservedDate {
+  font-size: 35px;
+  font-weight: bold;
+  position: relative;
+  top: 5px;
+}
+
+.reservationDetails .reservationOtherInfo {
+  width: 72%;
+  height: 100%;
+  min-height: fit-content;
+  background-color: #fafafa;
+}
+
+.reservationOtherInfo .reservationType,
+.reservationOtherInfo .destinationFacility {
+  width: 92%;
+  margin: auto;
+}
+
+.reservationOtherInfo .reservationType {
+  margin-top: 10px;
+  color: #044f12;
+  font-size: small;
+}
+
+.reservationOtherInfo .destinationFacility {
+  font-size: 16px;
+}
+
+.reservationOtherInfo .reservedTime {
+  display: flex;
+  width: 36%;
+  min-width: fit-content;
+  margin-left: 4%;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: hsla(131, 90%, 16%, 0.15);
+  justify-content: space-evenly;
+}
+
+.reservationOtherInfo .reservedTimeIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 2.5px;
+  background-image: url("../../Images/clock_Icon.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 1435px) {
+  .reservationOtherInfo .destinationFacility {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .calendarContainer .upcomingReservationContainer {
+    height: 29.2%;
+  }
+
+  .reservationOtherInfo .destinationFacility {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1145px) {
+  .reservationOtherInfo .destinationFacility {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .reservationOtherInfo .destinationFacility {
+    font-size: 16px;
+  }
+
+  .legendVehicleReservation label,
+  .legendNationalOffice label {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 470px) {
+  .legendVehicleReservation label,
+  .legendNationalOffice label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 412px) {
+  .reservationOtherInfo .destinationFacility {
+    font-size: 14px;
+  }
+
+  .calendarContainer .upcomingReservationContainer {
+    height: 30%;
+  }
+}
+
+@media (max-width: 380px) {
+  .reservationOtherInfo .destinationFacility {
+    font-size: 14px;
+  }
+
+  .calendarContainer .upcomingReservationContainer {
+    height: 100px;
+  }
+}

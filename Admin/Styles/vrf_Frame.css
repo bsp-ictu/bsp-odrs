@@ -1,0 +1,726 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: url(../../Images/BSP_Logo.png);
+    background-size: 17%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.background-blur {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.background-blur #header .container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px -4px 7px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+#bsp-logo {
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    background: url('../../Images/BSP_Logo.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+}
+#logout-btn {
+    display: inline-block;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: url('../../Images/logout_Icon.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+    right:80px;
+    cursor: pointer;
+    border: none;
+}
+
+#logout-btn:hover {
+    background: url('../../Images/logout-hover_Icon.png') no-repeat center center;
+    background-size: contain;
+}
+
+h1 {
+    font-size: 28px;
+    color: #000000;
+    margin: 0;
+    font-weight: lighter;
+    white-space: nowrap;
+}
+
+.background-blur .sidebar-menu {
+    position: fixed;
+    align-items: center center;
+    top: 100px;
+    left: 23px;
+    height: calc(100vh - 120px);
+    width: 301px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px -2px 7px -4px rgba(0, 0, 0, 0.5);
+    /* overflow-y: auto; */
+}
+
+.blockBtn {
+    border-radius: 8px;
+}
+.blockBtn .btn {
+    display: block;
+    padding-left: 5%;
+    top:8px;
+    left: 8px;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    text-align: left;
+    background-color: #ffffff;
+    border: none;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+}
+.blockBtn #home-key {
+    padding-top: 5%;
+}
+.blockBtn .btn:hover {
+    background-color: hsla(131, 90%, 16%, 0.15);
+}
+
+#vrf-btn {
+    background-color: hsla(131, 90%, 16%, 0.15);
+}
+
+.admin-container {
+    position: fixed;
+    top: 100px;
+    left: 339px;
+    height: calc(100vh - 120px);
+    width: calc(100vw - 360px);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px -4px 7px -4px rgba(0, 0, 0, 0.5);
+    /* overflow-y: auto; */
+}
+
+.admin-index-text-container {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    background-color: #044f12;
+    height: 60px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.admin-index-text {
+    font-size: 28px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+.vrf-info {
+    display: flex;
+    margin-top: 30px;
+}
+
+.vrf-info .vrf-info-left {
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 3%;
+}
+
+.vrf-info .vrf-info-right {
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.blockBtn-vrf-function {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    gap: 20px;
+    height: 22%;
+}
+.blockBtn-vrf-function .btn,
+.blockBtn-vrf-function .cancelRequestbtn{
+    width: 200px;
+    height: 58px;
+    padding: 10px 0;
+    text-align: center;
+    background: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 4px;
+}
+
+.blockBtn-vrf-function .cancelRequestbtn{
+    border: 2px solid #A50003;
+    color: #A50003;
+}
+
+.blockBtn-vrf-function .btn{
+    border: 2px solid #044f12;
+    color: #044f12;
+}
+
+.blockBtn-vrf-function .cancelRequestbtn:hover {
+    background-color: #A50003;
+    color: #FFFFFF
+}
+.blockBtn-vrf-function .btn:hover {
+    background-color: #044f12;
+    color: #FFFFFF
+}
+.driver-vehicle-info {
+    margin-top: 20px;
+}
+
+.driver-vehicle-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; /* Keeps items close together */
+    justify-content: center; /* Centers the dropdown groups */
+    align-items: center; /* Aligns vertically */
+}
+
+.vehicle-info, 
+.driver-info, 
+.status-vrf {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+/* Labels */
+.vehicle-label, .driver-name-label, .set-status-label {
+    width: auto; 
+    text-align: right;
+    font-size: 20px;
+    white-space: nowrap;
+    margin-right: 5px;
+}
+
+/* Dropdowns (Fixed Width, Keeping Original Design) */
+.vehicle-dropdown, .driver-dropdown, .status-dropdown-menu {
+    width: 180px; 
+    padding: 4px;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 8px; 
+    border: 1px solid #ccc;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+}
+/* button {
+    margin: 10px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+} */
+
+.status-modal,
+.cancellation-modal {
+    display: none;
+    position: fixed;
+    z-index: 15;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    background: white;
+    padding: 30px 20px 0px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.status-dialogue {
+    text-align: center;
+    margin: 0;
+}
+
+.modal-content {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+    align-items: flex-end;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.update-confirm-btn, 
+.confirm-update-btn,
+.cancel-update-btn {
+    display: block;
+    top:8px;
+    left: 8px;
+    width: 120px;
+    height: 40px;
+    padding: 5px 0;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #044f12;
+    background: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: #044f12;
+    cursor: pointer;
+    border-radius: 4px;
+    gap: 10px;
+}
+#cancelBtn {
+    border: 2px solid #A50003;
+    color: #A50003;
+}
+
+#cancelBtn:hover{
+    background-color: #A50003;
+    color: #FFFFFF;
+}
+
+.update-confirm-btn:hover, 
+.confirm-update-btn:hover{
+    background-color: #044f12;
+    color: #FFFFFF;
+}
+.status-confirmation-label {
+    font-size: 28px;
+    margin: 20px;
+    text-align: center;
+}
+.status-confirmation-modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.status-confirm-btn {
+    display: block;
+    top:8px;
+    left: 8px;
+    width: 150px;
+    height: 50px;
+    padding: 10px 0;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #6366F1;
+    border: none;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.vehicle-sched-modal {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height:850px; 
+    width: 500px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.vehicle-sched-close-btn {
+    display: block;
+    top:8px;
+    left: 8px;
+    width: 309px;
+    height: 58px;
+    padding: 10px 0;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #6366F1;
+    border: none;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.vehicle-sched-label {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px
+}
+
+.reservation-vrf {
+    width: 80%;
+    height: 200px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    /* overflow-y: auto; */
+}
+
+.reservation-vrf-header {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 0px;
+    margin-left: 0px
+}
+
+.vrf-info-container {
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height:50%;
+    width: 90%
+}
+
+.notificationContainer{
+    display: none;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(147, 147, 147, 0.50);
+}
+
+.notificationContainer .successfulNotification{
+    display: none;
+    width: 27.17%;
+    height: 22%;
+    position: fixed;
+    top: 39%;
+    left: 36.42%;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+    text-align: center;
+}
+
+.notificationContainer .unsuccessfulNotification{
+    display: none;
+    width: 29%;
+    height: 22%;
+    position: fixed;
+    top: 39%;
+    left: 35.5%;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+    text-align: center;
+}
+
+.successfulNotification h2,
+.successfulNotification h4,
+.unsuccessfulNotification h2,
+.unsuccessfulNotification h4{
+    font-weight: lighter;
+}
+
+.successfulNotification h2,
+.unsuccessfulNotification h2{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.successfulNotification h4,
+.unsuccessfulNotification h4{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.successfulNotification button,
+.unsuccessfulNotification button{
+    width: 21.94%;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    background-color: #6366F1;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.successfulNotification button:hover,
+.unsuccessfulNotification button:hover{
+    background-color: #01048f;
+}
+
+.notificationContainer .conflict-msg {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 23.17%;
+    height: 23%;
+    min-height: fit-content;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+    z-index: 3;
+}
+
+
+.conflict-msg .conflict-msg-header {
+    margin: auto;
+    margin-bottom: 0px;
+    margin-top: 6%;
+    font-size: 30px;
+}
+
+.conflict-msg .conflict-msg-body {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.conflict-msg button {
+    width: 80px;
+    margin-bottom: 2%;
+    height: 40px;
+    border: 2px solid #044f12;
+    border-radius: 4px;
+    background: none;
+    color: #044f12;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.conflict-msg button:hover{
+    background-color: #044f12;
+    color: white;
+}
+
+.notificationContainer .logOutNotification{
+    display: none;
+    min-width: 343px;
+    width: 23%;
+    min-height: 150px;
+    height: 17%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+}
+
+.logOutNotification h2,
+.logOutNotification h4{
+    margin-left: 5%;
+    font-weight: lighter;
+}
+
+.logOutNotification h2{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.logOutNotification h4{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.logOutNotification button{
+    width: 21.94%;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff00;
+    color: #FF0000;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logOutNotification .button-container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.upcomingReservationContainer {
+    width: 80%;
+    height: 200px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    /* overflow-y: auto; */
+}
+
+.upcomingReservationContainer .reservationDetails{
+    display: flex;
+    width: 96%;
+    height: 80px;
+    margin: auto;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    box-shadow: 0 0 1px rgb(154, 153, 151);
+
+}
+
+.reservationDetails .reservationDate{
+    width: 28%;
+    height: 100%;
+    background-color: rgb(1, 4, 143);
+    color: white;
+    text-align: center;
+}
+
+.reservationDate .reservedMonth{
+    position: relative;
+    top: 11.5%;
+    font-size: 20px;
+}
+
+.reservationDate .reservedDate{
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+}
+
+.reservationDetails .reservationOtherInfo{
+    width: 72%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+.reservationOtherInfo .reservationType,
+.reservationOtherInfo .destinationFacility{
+    width: 92%;
+    margin: auto;
+}
+
+.reservationOtherInfo .reservationType{
+    margin-top: 10px;
+    color: #A50003;
+    font-size: small;
+}
+
+.reservationOtherInfo .destinationFacility{
+    font-size: 16px;
+}
+
+.reservationOtherInfo .reservedTime{
+    display: flex;
+    width: 36%;
+    margin-left: 4%;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #ededed;
+    justify-content: space-evenly;
+}
+
+.reservationOtherInfo .reservedTimeIcon{
+    width: 16px;
+    height: 16px;
+    background-image: url('../../Images/clock_Icon.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

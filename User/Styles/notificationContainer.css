@@ -1,0 +1,226 @@
+.notificationContainer {
+  display: none;
+  z-index: 25;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(147, 147, 147, 0.5);
+}
+
+.notificationContainer .successfulNotification {
+  display: none;
+  width: 27.17%;
+  height: fit-content;
+  padding-bottom: 10px;
+  position: fixed;
+  top: 39%;
+  left: 36.42%;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+  text-align: center;
+}
+
+.notificationContainer .unsuccessfulNotification {
+  display: none;
+  width: 29%;
+  height: fit-content;
+  padding-bottom: 10px;
+  position: fixed;
+  top: 39%;
+  left: 35.5%;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+  text-align: center;
+}
+
+.notificationContainer .unavailableNotification {
+  display: none;
+  width: 29%;
+  height: 25%;
+  max-height: 175px;
+  min-height: fit-content;
+  padding: 2px;
+  position: fixed;
+  top: 39%;
+  left: 35.5%;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+  text-align: center;
+}
+
+.successfulNotification h2,
+.successfulNotification h4,
+.unsuccessfulNotification h2,
+.unsuccessfulNotification h4,
+.unavailableNotification h2,
+.unavailableNotification h4 {
+  font-weight: lighter;
+}
+
+.successfulNotification h2,
+.unsuccessfulNotification h2,
+.unavailableNotification h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.successfulNotification h2 {
+  color: rgb(0, 99, 0);
+}
+
+.unsuccessfulNotification h2,
+.unavailableNotification h2 {
+  color: #a50003;
+}
+
+.successfulNotification h4,
+.unsuccessfulNotification h4,
+.unavailableNotification h4 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.successfulNotification button,
+.unsuccessfulNotification button,
+.unavailableNotification button {
+  width: 21.94%;
+  height: 50px;
+  border: 2px solid #044f12;
+  border-radius: 4px;
+  background: none;
+  color: #044f12;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.successfulNotification button:hover,
+.unsuccessfulNotification button:hover,
+.unavailableNotification button:hover {
+  background-color: #044f12;
+  color: white;
+}
+
+.notificationContainer .updateNotification,
+.notificationContainer .logOutNotification {
+  display: none;
+  width: 27.17%;
+  height: 20%;
+  min-height: 150px;
+  position: fixed;
+  top: 39%;
+  left: 36.42%;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+}
+
+.notificationContainer .logOutNotification {
+  height: 15.5%;
+  min-height: fit-content;
+}
+
+.notificationContainer .updateNotification {
+  height: 22%;
+}
+
+.updateNotification h2,
+.updateNotification h4,
+.logOutNotification h2,
+.logOutNotification h4 {
+  margin-left: 5%;
+  font-weight: lighter;
+}
+
+.updateNotification h2,
+.logOutNotification h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#sameOldNewPassword h2,
+#differentConfirmationPassword h2,
+#incorrectPassword h2 {
+  color: #a50003;
+}
+
+#successfulUpdatePassword h2 {
+  color: #044f12;
+}
+
+#successfulUpdatePassword h4 {
+  width: 90%;
+}
+
+.updateNotification h4,
+.logOutNotification h4 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.notification-button-container {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: flex-end;
+}
+
+.updateNotification button,
+.logOutNotification button {
+  width: 21.94%;
+  min-width: fit-content;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff00;
+  color: #ff0000;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#changePassword button {
+  margin-top: 15px;
+}
+
+#sameOldNewPassword button,
+#differentConfirmationPassword button,
+#incorrectPassword button,
+#successfulUpdatePassword button {
+  margin-left: 77%;
+}
+
+#successfulUpdatePassword button {
+  color: #044f12;
+}
+
+@media (max-width: 768px) {
+  .notificationContainer .successfulNotification,
+  .notificationContainer .unsuccessfulNotification,
+  .notificationContainer .updateNotification,
+  .notificationContainer .logOutNotification, 
+  .notificationContainer .unavailableNotification {
+    width: 93%;
+    height: 150px;
+    min-height: fit-content;
+    top: 50%;
+    left: 50%;
+    padding: 5px;
+    transform: translate(-50%, -50%);
+  }
+
+  .notificationContainer .updateNotification {
+    height: 165px;
+  }
+
+  .logOutNotification .cancelButton {
+    margin-left: 54%;
+  }
+}

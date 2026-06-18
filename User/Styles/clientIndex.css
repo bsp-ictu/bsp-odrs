@@ -1,0 +1,519 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url("../../Images/BSP_Logo.png");
+  background-repeat: no-repeat;
+  background-size: 299px 290px;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.clientBackground {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* ----------Copied from admin css files---------- */
+
+#header .container {
+  display: flex;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  width: 100vw;
+  height: 7%;
+  min-height: fit-content;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.35);
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+#bsp-logo {
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+  background: url("../../Images/BSP_Logo.png") no-repeat center center;
+  background-size: contain;
+  flex-shrink: 0;
+}
+
+#burger-menu-btn {
+  display: inline-block;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  right: 2%;
+  border: none;
+  background: url("../../Images/menu_Icon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 28px;
+  color: #000000;
+}
+
+/* ----------Copied from admin css files---------- */
+
+.clientAndCalendarContainer {
+  display: flex;
+  width: 100%;
+  height: 93%;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #044f12 #ffffff;
+}
+
+.clientAndCalendarContainer .clientContainer {
+  width: 60vw;
+  height: 82vh;
+  min-height: fit-content;
+  margin-right: 1%;
+  padding-top: 5px;
+  background-color: rgb(255, 255, 255, 0.75);
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgb(0, 0, 0, 0.35);
+}
+
+.clientContainer .informationContainer {
+  display: flex;
+  width: 95%;
+  height: 28%;
+  min-height: fit-content;
+  margin: auto;
+  align-items: center;
+}
+
+.informationContainer .employeePicture {
+  display: flex;
+  flex-direction: column;
+  width: 16%;
+  min-width: 110px;
+  height: 85%;
+  min-height: 110px;
+  align-items: center;
+  justify-content: end;
+}
+
+.employeePicture img {
+  width: 75%;
+  min-width: 110px;
+  height: 75%;
+  min-height: 110px;
+  border-radius: 50%;
+}
+
+.informationContainer .informationSubcontainer {
+  width: 84.23%;
+  height: 85%;
+  min-height: fit-content;
+}
+
+.informationSubcontainer .employeeName {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.informationSubcontainer .employeeName h2 {
+  margin: 0;
+  padding-left: 10px;
+  font-size: 2rem;
+}
+
+.informationSubcontainer .emailAndSearchContainer {
+  display: flex;
+  width: 100%;
+  height: 25%;
+  min-height: fit-content;
+}
+
+.emailAndSearchContainer .employeeAccount {
+  display: flex;
+  width: 65%;
+  height: 35%;
+  min-height: fit-content;
+  margin-top: 0px;
+}
+
+.emailAndSearchContainer .employeeAccount .emailIcon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-image: url("../../Images/email_Icon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.emailAndSearchContainer .employeeAccount .emailAccount {
+  display: flex;
+  height: 24px;
+  align-items: center;
+}
+
+.emailAndSearchContainer .employeeAccount .emailAccount h3 {
+  margin: 0;
+  margin-left: 8px;
+  font-size: 1.25rem;
+  font-weight: lighter;
+  color: #acabab;
+}
+
+.informationSubcontainer .searchContainer {
+  width: 25%;
+  min-width: 200px;
+  height: 100%;
+  min-height: fit-content;
+}
+
+.searchContainer input {
+  width: 92%;
+  height: 71%;
+  min-height: 24px;
+  margin-top: 0%;
+  padding-left: 10px;
+  border: solid;
+  border-radius: 20px;
+  border-width: 0.75px;
+  border-color: rgb(146, 142, 142, 0.91);
+  background: url("../../Images/search_Icon.png") no-repeat;
+  background-size: 13% 70%;
+  background-position: 95% center;
+  font-size: 14px;
+}
+
+.searchContainer input::placeholder {
+  text-align: center;
+}
+
+.searchContainer input:focus {
+  border-color: none;
+  outline: 1.75px solid #044f12;
+}
+
+.informationSubcontainer .yearContainer {
+  width: 110px;
+  height: 100%;
+  min-height: fit-content;
+}
+
+.yearContainer .yearDropDown {
+  width: 88%;
+  height: 80%;
+  min-height: 28px;
+  margin-left: 6.55px;
+  border-radius: 4px;
+  border-width: 0.75px;
+  border-color: rgb(146, 142, 142, 0.91);
+  background-color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.yearContainer .yearDropDown:hover {
+  cursor: pointer;
+}
+
+.clientContainer .tableHorizontalLine {
+  width: 94%;
+  margin: auto;
+  margin-bottom: 0.5%;
+  border: solid;
+  border-width: 2px;
+  border-color: rgba(217, 217, 217, 0.91);
+}
+
+.clientContainer .tableHeaderContainer {
+  width: 95%;
+  min-height: fit-content;
+  margin: auto;
+}
+
+.tableHeaderContainer table {
+  width: 98%;
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tableHeaderContainer th {
+  width: 150px;
+  height: 20px;
+  font-size: 17px;
+}
+
+.clientContainer .tableContainer {
+  width: 95%;
+  height: 55%;
+  margin: auto;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.tableContainer table {
+  width: 98%;
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tableContainer tbody tr:hover {
+  background: #1c9f3533;
+}
+
+.tableContainer td {
+  width: 150px;
+  height: 30px;
+}
+
+.tableContainer button {
+  padding: 0;
+  border: none;
+  background-color: #ffffff00;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tableContainer .noRecordsFound {
+  display: flex;
+  width: 30%;
+  height: 20%;
+  margin-left: 35%;
+  margin-top: 15%;
+  color: #989898;
+  align-items: center;
+  justify-content: center;
+}
+
+.noRecordsFound h4 {
+  font-weight: lighter;
+  text-align: center;
+}
+
+.clientContainer .newRequestContainer {
+  width: 95%;
+  height: 10%;
+  min-height: fit-content;
+  margin: auto;
+  padding: 5px;
+  align-content: center;
+  text-align: center;
+}
+
+.newRequestContainer .requestButton {
+  width: 227px;
+  height: 50px;
+  border: 2px solid #044f12;
+  border-radius: 4px;
+  background: none;
+  color: #044f12;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newRequestContainer .requestButton:hover {
+  background-color: #044f12;
+  color: white;
+}
+
+.clientAndCalendarContainer .calendarContainer {
+  width: 29vw;
+  min-width: fit-content;
+  height: 82vh;
+  min-height: fit-content;
+  background-color: rgb(255, 255, 255, 0.75);
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgb(0, 0, 0, 0.35);
+}
+
+@media (max-width: 1665px) {
+  #header .container {
+    height: 6.75%;
+  }
+
+  #bsp-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  #burger-menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  #header h1 {
+    font-size: 1.5rem;
+  }
+
+  .clientAndCalendarContainer {
+    height: 93.25%;
+  }
+
+  .employeePicture img {
+    width: 75%;
+    min-width: 110px;
+    height: 60%;
+    min-height: 110px;
+    border-radius: 50%;
+  }
+
+  .informationSubcontainer .employeeName h2 {
+    font-size: 1.5rem;
+  }
+
+  .emailAndSearchContainer .employeeAccount .emailIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .emailAndSearchContainer .employeeAccount .emailAccount {
+    height: 20px;
+  }
+
+  .emailAndSearchContainer .employeeAccount .emailAccount h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1255px) {
+  #header .container {
+    height: 6%;
+  }
+
+  #bsp-logo {
+    width: 37px;
+    height: 37px;
+  }
+
+  #burger-menu-btn {
+    width: 33px;
+    height: 33px;
+  }
+
+  #header h1 {
+    font-size: 1.25rem;
+  }
+
+  .clientAndCalendarContainer {
+    height: 94%;
+  }
+
+  .clientAndCalendarContainer .clientContainer,
+  .clientAndCalendarContainer .calendarContainer {
+    display: block;
+  }
+
+  .emailAndSearchContainer .employeeAccount .emailIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .emailAndSearchContainer .employeeAccount .emailAccount {
+    height: 18px;
+  }
+
+  .emailAndSearchContainer .employeeAccount .emailAccount h3 {
+    font-size: 0.9rem;
+  }
+
+  .informationSubcontainer .searchContainer {
+    min-width: 150px;
+  }
+
+  .tableHeaderContainer th {
+    font-size: 0.9rem;
+  }
+
+  .tableContainer td {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1075px) {
+  .clientAndCalendarContainer .clientContainer,
+  .clientAndCalendarContainer .calendarContainer {
+    display: block;
+    width: 95%;
+    margin-right: 0;
+  }
+
+  .clientAndCalendarContainer .calendarContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 625px) {
+  .informationSubcontainer .employeeName h2 {
+    font-size: 1.25rem;
+  }
+
+  .informationSubcontainer .emailAndSearchContainer {
+    flex-wrap: wrap;
+  }
+
+  .emailAndSearchContainer .employeeAccount {
+    width: 100%;
+  }
+
+  .informationSubcontainer .searchContainer,
+  .informationSubcontainer .yearContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .informationSubcontainer .searchContainer {
+    width: 70%;
+  }
+
+  .searchContainer input {
+    background-size: 19px 19px;
+  }
+
+  .informationSubcontainer .yearContainer {
+    width: 30%;
+  }
+
+  .tableHeaderContainer th {
+    font-size: 0.8rem;
+  }
+
+  .tableContainer td {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .clientAndCalendarContainer .clientContainer,
+  .clientAndCalendarContainer .calendarContainer {
+    margin-bottom: 17%;
+  }
+}

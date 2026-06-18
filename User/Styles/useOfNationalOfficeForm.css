@@ -1,0 +1,420 @@
+.officeRequestContainer {
+  display: none;
+  width: 90%;
+  height: 75%;
+  min-height: fit-content;
+  max-height: 539px;
+  justify-content: center;
+}
+
+.popupUseOfNationalOffice {
+  width: 40.79vw;
+  min-width: 595px;
+  height: 100%;
+  min-height: fit-content;
+  border-radius: 2px;
+  box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+  background-color: #ffffff;
+}
+
+.popupUseOfNationalOffice form {
+  width: 100%;
+  height: 100%;
+  min-height: fit-content;
+}
+
+.popupUseOfNationalOffice .formTitleContainer,
+.reservedOfficeSummary .formTitleContainer {
+  display: flex;
+  width: 100%;
+  height: 11%;
+  min-height: 55px;
+  background-color: #044f12;
+  align-items: center;
+  justify-content: center;
+}
+
+.popupUseOfNationalOffice h2,
+.reservedOfficeSummary h2 {
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+
+.popupUseOfNationalOffice .formDetails {
+  width: 100%;
+  height: 92.2%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #044f12 #ffffff;
+}
+
+.popupUseOfNationalOffice .dateAndTime {
+  display: flex;
+  width: 95%;
+  height: 25px;
+  margin: auto;
+  align-items: center;
+  justify-content: right;
+}
+
+.popupUseOfNationalOffice .dateAndTime span {
+  width: 140.75px;
+  text-align: right;
+}
+
+.popupUseOfNationalOffice .dateAndTime div {
+  width: 24px;
+  margin-left: 1%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  color: #d9d9d900;
+}
+
+.popupUseOfNationalOffice .facilityMainContainer {
+  display: flex;
+  width: 93.5%;
+  margin: auto;
+}
+
+.facilityMainContainer .facilitySubContainer {
+  margin-left: 10px;
+}
+
+.facilityMainContainer .facilitySubContainer .facilityOption {
+  display: flex;
+  margin-top: 5px;
+  font-size: 18px;
+  align-items: center;
+}
+
+.facilityMainContainer .facilitySubContainer .facilityOption label {
+  cursor: pointer;
+}
+
+.facilityMainContainer .facilitySubContainer .checkbox {
+  width: 19px;
+  min-width: 9px;
+  height: 19px;
+  min-height: 9px;
+  margin-right: 5px;
+  position: relative;
+  border: 0.75px solid;
+  border-radius: 4px;
+  border-color: #928e8e;
+  cursor: pointer;
+}
+
+.facilityMainContainer .facilitySubContainer input[type="radio"] {
+  display: none;
+}
+
+.facilityMainContainer
+  .facilitySubContainer
+  input[type="radio"]:checked
+  + .checkbox::after {
+  content: "";
+  width: 85%;
+  height: 85%;
+  position: absolute;
+  top: 7.5%;
+  left: 7.5%;
+  background-color: #044f12;
+  border-radius: 2.5px;
+}
+
+.facilityMainContainer .facilitySubContainer .specifyOthers {
+  height: 22px;
+  margin-left: 14%;
+  border: none;
+  border-bottom: 2px solid #928e8e;
+}
+
+.popupUseOfNationalOffice .dateTimeOfUseContainer {
+  display: flex;
+  width: 93.5%;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 18px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dateTimeOfUseContainer .dateInput, 
+.dateTimeOfUseContainer .timeInputStart, 
+.dateTimeOfUseContainer .timeInputEnd {
+  width: fit-content;
+  min-width: fit-content;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #928e8e;
+  border-radius: 4px;
+}
+
+/* .dateTimeOfUseContainer .timeInputStart{
+  margin-right: -31%;
+} */
+
+.dateTimeOfUseContainer .timeInputStart, 
+.dateTimeOfUseContainer .timeInputEnd{
+  width: 41%;
+  /* min-width: 290px; */
+}
+
+.timeInputStart .timeContainer {
+  display:flex; justify-content:space-between;
+}
+
+.startTimeContainer {
+  display: flex; 
+  margin-right: -10%
+}
+
+.dateTimeOfUseContainer label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4f4e4e;
+}
+
+.dateTimeOfUseContainer input,
+.dateTimeOfUseContainer select {
+  width: fit-content;
+  border: none;
+  background: none;
+  font-size: 16px;
+}
+
+.facilitySubContainer .specifyOthers:focus,
+.dateTimeOfUseContainer input:focus,
+.dateTimeOfUseContainer select:focus,
+.purposeInformationContainer .purposeInput:focus,
+.officeFlexContainer input:focus,
+.officeFlexContainer select:focus {
+  outline: none;
+}
+
+.popupUseOfNationalOffice .otherInformationContainer,
+.popupUseOfNationalOffice .purposeInformationContainer {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #928e8e;
+  border-radius: 4px;
+}
+
+.popupUseOfNationalOffice .purposeInformationContainer {
+  width: 91.75%;
+  margin-left: 3.25%;
+}
+
+.purposeInformationContainer label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4f4e4e;
+}
+
+.purposeInformationContainer .purposeInput {
+  width: 570px;
+  border: none;
+  background: none;
+  font-size: 16px;
+}
+
+.popupUseOfNationalOffice .officeFlexContainer {
+  display: flex;
+  width: 93.5%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.officeFlexContainer .otherInformationContainer {
+  width: 41%;
+}
+
+.officeFlexContainer label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4f4e4e;
+}
+
+.officeFlexContainer input,
+.officeFlexContainer select {
+  width: 99%;
+  border: none;
+  background: none;
+  font-size: 16px;
+}
+
+.popupUseOfNationalOffice .buttonFormContainer {
+  width: 93.5%;
+  margin: auto;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.reservedOfficeSummary {
+  display: block;
+  width: 25vw;
+  min-width: 375px;
+  height: 105%;
+  min-height: fit-content;
+  margin-left: 10px;
+  border-radius: 2px;
+  box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+  background-color: #ffffff;
+}
+
+.reservedOfficeSummary .reservedFacilityDetails {
+  width: 94%;
+  height: 88%;
+  margin: auto;
+  margin-top: 5px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #044f12 #ffffff;
+}
+
+.reservedFacilityDetails .detailContainer {
+  display: flex;
+  width: 98%;
+  height: 85px;
+  margin: auto;
+  margin-top: 5px;
+  box-shadow: 0 0 1px rgb(154, 153, 151);
+}
+
+.detailContainer .dateContainer {
+  width: 28%;
+  height: 100%;
+  background-color: #044f12;
+  color: white;
+  text-align: center;
+}
+
+.dateContainer .reservedMonth {
+  position: relative;
+  top: 11.5%;
+  font-size: 20px;
+}
+
+.dateContainer .reservedDate {
+  font-size: 35px;
+  font-weight: bold;
+  position: relative;
+  top: 5px;
+}
+
+.detailContainer .otherDetailsContainer {
+  width: 72%;
+  height: 100%;
+  background-color: #fafafa;
+}
+
+.otherDetailsContainer .clientDivision,
+.otherDetailsContainer .reservedFacility {
+  width: 92%;
+  margin: auto;
+}
+
+.otherDetailsContainer .clientDivision {
+  margin-top: 10px;
+  color: #044f12;
+  font-size: 14px;
+}
+
+.otherDetailsContainer .reservedFacility {
+  font-size: 16px;
+}
+
+.otherDetailsContainer .reservedPeriod {
+  display: flex;
+  width: fit-content;
+  margin-left: 4%;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: hsla(131, 90%, 16%, 0.15);
+}
+
+.otherDetailsContainer .timeIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background-image: url("../../Images/clock_Icon.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.reservedFacilityDetails .noUpcomingReservation {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.reservedFacilityDetails .noUpcomingReservation h4 {
+  margin: 0;
+  padding: 0;
+  color: #989898;
+  font-weight: lighter;
+}
+
+@media (max-width: 1000px) {
+  .reservedOfficeSummary {
+    display: none;
+  }
+}
+
+@media (max-width: 630px) {
+  .officeRequestContainer {
+    height: 60%;
+    max-height: none;
+  }
+
+  .popupUseOfNationalOffice {
+    width: 98vw;
+    min-width: 350px;
+  }
+
+  .popupUseOfNationalOffice .facilityMainContainer {
+    flex-direction: column;
+    width: 98%;
+    margin-top: 5px;
+  }
+
+  .facilityMainContainer .facilitySubContainer .specifyOthers {
+    width: 200px;
+    margin-left: 6%;
+  }
+
+  .dateTimeOfUseContainer .timeInputStart{
+    width: 100%;
+    min-width: 210px;
+  }
+  .dateTimeOfUseContainer .timeInputStart label,
+  .dateTimeOfUseContainer .timeInputStart input {
+    font-size: 12px;
+  }
+
+  .timeInputStart .timeContainer{
+    justify-content: space-around;
+  }
+
+  .startTimeContainer {
+    margin-left: -14%;
+  }
+}
+
+@media (max-width: 450px) {
+  .officeRequestContainer {
+    height: 83%;
+    max-height: 660px;
+    margin-bottom: 13%;
+  }
+}

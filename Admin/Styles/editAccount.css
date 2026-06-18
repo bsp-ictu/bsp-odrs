@@ -1,0 +1,869 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: url(../../Images/BSP_Logo.png);
+    background-size: 17%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+h3{
+    margin: 0;
+    padding: 0;
+}
+
+.background-blur {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.background-blur #header .container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px -4px 7px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+#bsp-logo {
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    background: url('../../Images/BSP_Logo.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+}
+#logout-btn {
+    display: inline-block;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: url('../../Images/logout_Icon.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+    right:80px;
+    cursor: pointer;
+    border: none;
+}
+
+#logout-btn:hover {
+    background: url('../../Images/logout-hover_Icon.png') no-repeat center center;
+    background-size: contain;
+}
+
+h1 {
+    font-size: 28px;
+    color: #000000;
+    margin: 0;
+    font-weight: lighter;
+    white-space: nowrap;
+}
+
+.background-blur .sidebar-menu {
+    position: fixed;
+    align-items: center center;
+    top: 100px;
+    left: 23px;
+    height: calc(100vh - 120px);
+    width: 301px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px -2px 7px -4px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.blockBtn {
+    border-radius: 8px;
+}
+.blockBtn .btn {
+    display: block;
+    padding-left: 5%;
+    top:8px;
+    left: 8px;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    text-align: left;
+    background-color: #ffffff;
+    border: none;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+}
+.blockBtn #home-key {
+    padding-top: 5%;
+}
+.blockBtn .btn:hover {
+    background-color: hsla(131, 90%, 16%, 0.15);
+}
+
+#editAccBtn {
+    background-color: hsla(131, 90%, 16%, 0.15);
+}
+
+.notificationContainer{
+    display: none;
+    z-index: 15;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(147, 147, 147, 0.50);
+    align-items:center;
+    justify-content: center;
+}
+        
+.notificationContainer .updateNotification,
+.notificationContainer .logOutNotification{
+    display: none;
+    min-width: 343px;
+    width: 23%;
+    min-height: 150px;
+    height: 17%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logOutNotification h2,
+.logOutNotification h4{
+    margin-left: 5%;
+    font-weight: lighter;
+}
+
+.logOutNotification h2{
+    margin-bottom: 10px;
+}
+
+.logOutNotification h4{
+    margin-bottom: 15px;
+}
+
+.buttonContainer {
+    display: flex;
+}
+
+.updateNotification button,     
+.logOutNotification button{
+    width: 21.94%;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff00;
+    color: #FF0000;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logOutNotification .cancelButton{
+    margin-left:150px;
+}
+
+.logOutNotification .okButton{
+    margin-left:25px;
+}
+.tableContainer .noRecordsFound{
+    background: none;
+    color: #989898;
+}
+
+
+
+.editAccountContainer{
+    position: absolute;
+    top: 100px;
+    left: 339px;
+    width: calc(100vw - 360px);
+    height: calc(100vh - 118px);
+    display: grid;
+    grid-template-areas: 'accountManageArea accountManageArea accountManageArea accountManageArea accountManageArea accountManageArea myProfileArea myProfileArea';
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+}
+
+.accountManage {
+    grid-area: accountManageArea;
+    
+}
+
+.myProfile {
+    grid-area: myProfileArea;
+    overflow: hidden;
+}  
+
+.editAccountContainer > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  border: 1px solid #D9D9D9;
+  box-shadow: 0px -2px 7px -4px rgba(0, 0, 0, 0.5);
+}
+
+.accountManage-header,
+.myProfile-header {
+    align-items: center;
+    background-color: #044f12;
+    height: 60px;
+    display: flex;
+    border-radius: 4px 4px 0 0;
+    min-height: fit-content;
+}
+
+.accountManage-text,
+.myProfile-text,
+.resetPass-text{
+    width: 60%;
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: fit-content;
+}
+
+.default-pass-container {
+    font-size: 14px;
+    text-align: right;
+    color: white;
+    width: 30%;
+}
+
+
+.addAcc-btn {
+    margin-top: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 5px;
+    height: 35px;
+    vertical-align: middle;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: .2s;
+    width: 8%;
+}
+
+.addAcc-btn:hover {
+    box-shadow: 0 0 4px black;
+    background-color: white;
+    color: #044f12;
+}
+
+/*-----Table-----*/
+.bsp-account-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout:fixed;
+}
+
+.bsp-account-table td input {
+    color: black !important; 
+}
+
+.bsp-account-table td,
+.bsp-account-table th{
+    padding-top: 15px;
+    padding-left: 20px;
+    width: 30%;
+    text-align: left;
+    font-size: 16px;
+}
+
+#accountNameCol {
+    width: 30%;
+}
+
+#emailCol {
+    width: 30%;
+}
+
+#accountRoleCol {
+    width: 20%;
+}
+
+
+.edit-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url('../../Images/edit.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+    cursor: pointer;
+    pointer-events: auto;
+}
+#editRow,
+#editCol {
+    width: 5%;
+}
+
+.delete-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url('../../Images/delete.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+    cursor: pointer;
+    pointer-events: auto;
+}
+#deleteRow,
+#deleteCol {
+    width: 5%;
+}
+
+.save-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url('../../Images/diskette.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+    cursor: pointer;
+    pointer-events: auto;
+}
+#saveRow,
+#saveCol {
+    width: 5%;
+}
+
+.reset-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url('../../Images/reset.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+    cursor: pointer;
+    pointer-events: auto;
+}
+#resetRow,
+#resetCol {
+    width: 5%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #514f4f;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.status-modal {
+    display: none;
+    position: fixed;
+    z-index: 15;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    background: white;
+    padding: 10px 20px 0px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.status-modal-icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    /* background: url('../../Images/check.png') no-repeat center center; */
+    background-size: contain;
+    flex-shrink: 0;
+    margin: auto;
+}
+
+.status-dialogue {
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.modal-content {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+    align-items: flex-end;
+}
+
+.update-confirm-btn, 
+.confirm-update-btn,
+.cancel-update-btn {
+    
+    display: block;
+    top:8px;
+    left: 8px;
+    width: 100px;
+    height: 50px;
+    padding: 5px 0;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #044f12;
+    background: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #044f12;
+    cursor: pointer;
+    border-radius: 4px;
+    gap: 10px;
+}
+#cancelBtn {
+    border: 2px solid #A50003;
+    color: #A50003;
+}
+
+#cancelBtn:hover{
+    background-color: #A50003;
+    color: #FFFFFF;
+}
+
+.update-confirm-btn:hover, 
+.confirm-update-btn:hover{
+    background-color: #044f12;
+    color: #FFFFFF;
+}
+
+/* my profile css */
+.photoPlaceholder {
+  width: 125px;
+  height: 125px;
+  margin: auto;
+  margin-top: 20px;
+  position: relative;
+  border-radius: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 175px 175px;
+  background-position: center center;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.photoPlaceholder:hover {
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+}
+
+.photoPlaceholder h5 {
+  opacity: 0;
+  width: 100%;
+  height: 40%;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  background-image: linear-gradient(
+    to top,
+    white,
+    rgb(255, 255, 255, 0.9),
+    rgb(255, 255, 255, 0.75),
+    rgb(255, 255, 255, 0.5),
+    rgb(255, 255, 255, 0.25),
+    rgb(255, 255, 255, 0.125),
+    rgb(255, 255, 255, 0)
+  );
+  color: #044f12;
+  font-size: 16px;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.photoPlaceholder:hover h5 {
+  opacity: 1;
+}
+
+.fullNameContainer h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.fullNameContainer {
+  width: 100%;
+  height: fit-content;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.fullNameContainer h3 {
+  font-style: 30px;
+}
+
+ .emailContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.emailContainer .emailIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+  background-image: url("../../Images/email_settings.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.emailContainer .emailAccount {
+  align-content: center;
+}
+
+.emailContainer .emailAccount h4 {
+  margin: 0;
+  padding: 0;
+  color: #044f12;
+}
+
+.formSettings {
+  width: 100%;
+  height: 190px;
+}
+
+.formSettings .formAction {
+  width: 310px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.formSettings .formAction h3 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  color: #044f12;
+}
+
+.formSettings .updatePassword {
+  width: 90%;
+  height: 21%;
+  margin: auto;
+  margin-bottom: 5px;
+  border: 2px solid #044f12;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255, 0.75);
+  box-shadow: 0 0 4px rgb(0, 0, 0, 0.2);
+  align-content: center;
+}
+
+.formSettings .requiredPasswordPattern {
+  width: 91%;
+  margin: auto;
+  margin-bottom: 5px;
+  color: #a50003;
+  font-size: 10px;
+}
+
+.formSettings .updatePassword label,
+.formSettings .updatePassword input {
+  margin-left: 6px;
+}
+
+.formSettings .updatePassword label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4f4e4e;
+}
+
+.formSettings .updatePassword .passwordInputContainer {
+  display: flex;
+}
+
+.formSettings .updatePassword input {
+  width: 85%;
+  border: none;
+  background: none;
+  font-size: 16px;
+}
+
+.formSettings .updatePassword input:focus {
+  outline: none;
+}
+
+.formSettings .updatePassword #showCurrentPassword,
+.formSettings .updatePassword #showNewPassword,
+.formSettings .updatePassword #showConfirmPassword {
+  display: block;
+  background-image: url("../../Images/show_Password.png");
+  transition: 0.2s;
+}
+
+.formSettings .updatePassword #hideCurrentPassword,
+.formSettings .updatePassword #hideNewPassword,
+.formSettings .updatePassword #hideConfirmPassword {
+  display: none;
+  background-image: url("../../Images/hide_Password.png");
+  transition: 0.2s;
+}
+
+.formSettings .updatePassword .showHidePassword {
+  width: 9%;
+  background-repeat: no-repeat;
+  background-size: 23px 23px;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.formSettings .saveButtonContainer {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.saveButtonContainer button {
+  width: 100px;
+  height: 40px;
+  margin-top: 5px;
+  border: 2px solid #044f12;
+  border-radius: 4px;
+  background: rgb(255, 255, 255, 0.75);
+  color: #044f12;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.saveButtonContainer button:hover {
+  background-color: #044f12;
+  color: white;
+}
+
+.notificationContainer .updateNotification {
+  height: 22%;
+}
+
+.updateNotification h2,
+.updateNotification h4,
+.logOutNotification h2,
+.logOutNotification h4 {
+  margin-left: 5%;
+  font-weight: lighter;
+}
+
+.updateNotification h2,
+.logOutNotification h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.logOutNotification .button-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+#sameOldNewPassword h2,
+#differentConfirmationPassword h2,
+#incorrectPassword h2 {
+  color: #a50003;
+}
+
+#successfulUpdatePassword h2 {
+  color: #044f12;
+}
+
+#successfulUpdatePassword h4 {
+  width: 90%;
+}
+
+.updateNotification h4,
+.logOutNotification h4 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.notification-button-container {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: flex-end;
+}
+
+.updateNotification button,
+.logOutNotification button {
+  width: 21.94%;
+  min-width: fit-content;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff00;
+  color: #ff0000;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#changePassword button {
+  margin-top: 15px;
+}
+
+#sameOldNewPassword button,
+#differentConfirmationPassword button,
+#incorrectPassword button,
+#successfulUpdatePassword button {
+  margin-left: 77%;
+}
+
+#successfulUpdatePassword button {
+  color: #044f12;
+}
+
+/* password reset modal */
+
+.reset-password-header{
+    align-items: center;
+    background-color: #044f12;
+    height: 40px;
+    display: flex;
+    border-radius: 4px 4px 0 0;
+    min-height: fit-content;
+}
+
+.notificationContainer .resetPasswordContainer {
+  display: none;
+  width: 100%;
+  min-width: 343px;
+  max-width: 404px;
+  height: 27%;
+  min-height: fit-content;
+  max-height: 255.141px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} 
+
+.password-reset-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 2%;
+    height: 75%;
+    width:90%;
+    min-height: fit-content;
+}
+
+.password-reset-form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4f4e4e;
+    margin-left: 5px;
+}
+
+.set-threshold-container,
+.reset-password-container{
+    border: 2px solid #044f12;
+    border-radius: 4px;
+    height: 58px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reset-password-input,
+.set-treshold-input{
+    width: 95%;
+    border: none;
+    border-radius: 4px;
+    margin: 8px 0 0px 5px;
+    font-size: 16px;
+}
+
+.reset-password-input:focus,
+.set-treshold-input:focus {
+    outline: none;
+}
+
+
+.reset-password-action-btn {   
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 15px 0;
+}
+
+.submit-reset-pass-btn,
+.cancel-reset-pass-btn {
+    height: 45px;
+    width: 100px;
+    border-radius: 4px;
+    background: none;
+    transition-duration: 0.3s;
+    font-weight: bold;
+    font-size: 12pt;
+    cursor: pointer;
+       
+}
+
+.submit-reset-pass-btn{
+    margin-right: 20px;
+    border: 2px solid #044f12;
+    color: #044f12;
+}
+
+.cancel-reset-pass-btn{
+    border: 2px solid #a50003;
+    color: #a50003;
+}
+
+.submit-reset-pass-btn:hover{
+    border: 2px solid #044f12;
+    background-color: #044f12;
+    color: #ffffff;
+}
+
+.cancel-reset-pass-btn:hover{
+    border: 2px solid #a50003;
+    background-color: #a50003;
+    color: #ffffff;
+}

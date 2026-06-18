@@ -1,0 +1,178 @@
+.requestSummaryContainer{
+    display: none;
+    z-index: 15;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(147, 147, 147, 0.50);
+    align-items: center;
+    justify-content: center;
+}
+
+.requestSummaryContainer .vehicleReservationSummary{
+    display: none;
+    width: 915px;
+    height: 515px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+}
+
+.requestSummaryContainer .useOfNationalOfficeSummary{
+    display: none;
+    width: 915px;
+    height: 530px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(143, 143, 143, 0.75);
+}
+
+.vehicleReservationSummary .summaryHeader,
+.useOfNationalOfficeSummary .summaryHeader{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 5px;
+    background-color: #044f12;
+    color: white;
+    justify-content: center;
+}
+
+.summaryHeader .summaryTitle{
+    margin-left: 30.5%;
+    vertical-align: bottom;
+}
+
+.summaryHeader .summaryTitle h2{
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.summaryHeader .closeSummaryButton{
+    width: 16px;
+    height: 16px;
+    margin-left: 25%;
+    margin-top: 2%;
+    border: none;
+    background-image: url('../../Images/close_Icon2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.vehicleReservationSummary .summaryMainContainer,
+.useOfNationalOfficeSummary .summaryMainContainer{
+    display: flex;
+    width: 93.5%;
+    height: 380px;
+    margin: auto;
+}
+
+.summaryMainContainer .summarySubContainer{
+    width: 50%;
+    margin-left: 5%;
+    font-size: 18px;
+}
+
+.vehicleReservationSummary .printRequestForm,
+.useOfNationalOfficeSummary .printRequestForm{
+    width: 21.94%;
+    height: 50px;
+    margin-top: 5px;
+    /* margin-left: 39.3%; */
+    border: 2px solid #044f12;
+    border-radius: 4px;
+    background: none;
+    color: #044f12;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.vehicleReservationSummary .cancelRequestForm,
+.useOfNationalOfficeSummary .cancelRequestForm{
+    width: 21.94%;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 2%;
+    border: 2px solid #A50003;
+    border-radius: 4px;
+    background: none;
+    color: #A50003;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.vehicleReservationSummary .printRequestForm:hover,
+.useOfNationalOfficeSummary .printRequestForm:hover{
+    background-color: #044f12;
+    color: #FFFFFF;
+}
+
+.vehicleReservationSummary .cancelRequestForm:hover,
+.useOfNationalOfficeSummary .cancelRequestForm:hover{
+    background-color: #A50003;
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .requestSummaryContainer .vehicleReservationSummary,
+    .requestSummaryContainer .useOfNationalOfficeSummary{
+        width: 96%;
+        height: fit-content;
+    }
+
+    .summaryHeader .summaryTitle{
+        min-width: 274px;
+        margin-left: 12%;
+        text-align: center;
+    }
+
+    .summaryHeader .summaryTitle h2{
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .summaryHeader .closeSummaryButton{
+        width: 14px;
+        height: 14px;
+        margin-left: 9%;
+    }
+
+    .vehicleReservationSummary .summaryMainContainer,
+    .useOfNationalOfficeSummary .summaryMainContainer{
+        height: 350px;
+        min-height: fit-content;
+    }
+
+    .summaryMainContainer .summarySubContainer{
+        margin-left: 1%;
+        font-size: 12px;
+    }
+
+    .vehicleReservationSummary .printRequestForm,
+    .useOfNationalOfficeSummary .printRequestForm{
+        width: fit-content;
+        /* margin-left: 28.33%; */
+        margin-bottom: 10px;
+        background-color: #044f12;
+        color: #FFFFFF;
+    }
+
+    .vehicleReservationSummary .cancelRequestForm,
+    .useOfNationalOfficeSummary .cancelRequestForm{
+        width: fit-content;
+        /* margin-left: 28.33%; */
+        margin-bottom: 10px;
+        background-color: #A50003;
+        color: #FFFFFF;
+    }
+}
