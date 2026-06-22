@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ICTU-SERVER
+    runs-on: self-hosted
     steps:
       - name: Checkout Code From Github
         uses: actions/checkout@v4
